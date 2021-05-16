@@ -43,11 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractDomain\IShape.cs" />
+    <Compile Include="AbstractDomain\ShapeGlobals.cs" />
+    <Compile Include="ConcreteDomain\Circle.cs" />
+    <Compile Include="ConcreteDomain\Dodecahedron.cs" />
+    <Compile Include="ConcreteDomain\Rhombicosidodecahedron.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
