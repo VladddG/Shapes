@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractDomain\IShape.cs" />
-    <Compile Include="AbstractDomain\ShapeGlobals.cs" />
     <Compile Include="ConcreteDomain\Circle.cs" />
     <Compile Include="ConcreteDomain\Dodecahedron.cs" />
     <Compile Include="ConcreteDomain\Rhombicosidodecahedron.cs" />

@@ -1,23 +1,16 @@
 ﻿using Shapes.AbstractDomain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shapes.ConcreteDomain
 {
-    public class Rhombicosidodecahedron : ShapeGlobals, IShape
+    public class Rhombicosidodecahedron : IShape
     {
         private Dodecahedron _decahedron;
-        public Rhombicosidodecahedron(Dodecahedron decahedron, float x, float y) : base(x, y)
+        public Rhombicosidodecahedron(Dodecahedron decahedron)
         {
             _decahedron = decahedron;
         }
 
-        public float Area() => _decahedron.Area() * 10;
-
-        public float[] Localize() => GetPosition();
+        public double Area() => _decahedron.Area() * 10;
 
         public override string ToString()
         {

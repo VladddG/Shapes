@@ -8,7 +8,6 @@ namespace Shapes.AbstractDomain
 {
     public interface IShape
     {
-        float Area();
-        float[] Localize();
+        double Area();
     }
 }

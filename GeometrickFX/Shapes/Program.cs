@@ -9,12 +9,11 @@ namespace Shapes
     {
         static void Main(string[] args)
         {
-            Dodecahedron decahedron = new Dodecahedron((float)5.5452, (float)1.2);
             List<IShape> shapes = new List<IShape>()
             {
-                new Circle(42.2, x => Convert.ToSingle( Math.PI * Math.Pow(x,2)), (float)44.2, (float) 78),
-                decahedron,
-                new Rhombicosidodecahedron(decahedron, (float) 29.42552, (float) 52.125125)
+                new Circle(42.2, x => Math.PI * Math.Pow(x,2)),
+                new Dodecahedron(10),
+                new Rhombicosidodecahedron(new Dodecahedron(11))
             };
 
             foreach (var shape in shapes)

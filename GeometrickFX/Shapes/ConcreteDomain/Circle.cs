@@ -8,22 +8,20 @@ using System.Threading.Tasks;
 
 namespace Shapes.ConcreteDomain
 {
-    public class Circle : ShapeGlobals, IShape
+    public class Circle : IShape
     {
         private double _radius;
-        readonly Expression<Func<float, float>> _formula;
-        public Circle(double radius, Expression<Func<float, float>> formula, float x, float y) : base(x, y)
+        readonly Expression<Func<double, double>> _formula;
+        public Circle(double radius, Expression<Func<double, double>> formula)
         {
             _radius = radius;
             _formula = formula;
         }
-        public float Area()
+        public double Area()
         {
-            Func<float, float> result = _formula.Compile();
-            return result((float) _radius);
+            Func<double, double> result = _formula.Compile();
+            return result(_radius);
         }
-
-        public float[] Localize() => GetPosition();
 
         public override string ToString()
         {

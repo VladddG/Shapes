@@ -3,23 +3,22 @@ using System;
 
 namespace Shapes.ConcreteDomain
 {
-    public class Dodecahedron : ShapeGlobals, IShape
+    public class Dodecahedron : IShape
     {
-        public Dodecahedron(float x, float y) : base(x, y)
+        public double SmallArea { get; private set; }
+        public Dodecahedron(double smallArea)
         {
-
+            this.SmallArea = smallArea;
         }
 
-        public float Area()
+        public double Area()
         {
             return 10;
         }
 
-        public float[] Localize() => GetPosition();
-
         public override string ToString()
         {
-            return $"A = a^2 * 12312512512 => {Area()}";
+            return $"A = {SmallArea}^2 * 12312512512 => {Area()}";
         }
     }
 }
